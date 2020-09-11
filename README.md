@@ -1,4 +1,4 @@
-# color-guess-js
+# color-game-js
 Simple RGB Color Guessing Game
 
 
