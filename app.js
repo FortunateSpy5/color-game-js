@@ -4,15 +4,22 @@ const colorsContainer = document.querySelector(".colors .container");
 const easyBtn = document.querySelector(".easy");
 const hardBtn = document.querySelector(".hard");
 const newBtn = document.querySelector(".new-colors");
+const message = document.querySelector(".message");
+const changeColor = document.querySelectorAll(".change");
+const header = document.querySelector("header");
 
 let easy = false;
+let colorsClicked = [false, false, false, false, false, false];
+let correct = 0;
+let answered = false;
 
 const reset = () => {
     const rgbValues = [];
-    const correct = Math.floor(Math.random() * 6);
+    correct = Math.floor(Math.random() * 6);
 
     for (let i = 0; i < 6; i++) {
         colors[i].style.display = "inherit";
+        colors[i].style.opacity = "1";
     }
 
     ar = [0, 1, 2, 3, 4, 5];
@@ -40,6 +47,10 @@ const reset = () => {
         rgbValues[correct][2];
 
     colorsContainer.style.display = "grid";
+
+    header.style.background = "#3B76A9";
+    message.textContent = "";
+    answered = false;
 };
 
 const getRgb = () => {
@@ -78,3 +89,20 @@ hardBtn.addEventListener("click", function () {
 newBtn.addEventListener("click", function () {
     reset();
 });
+
+for(let i = 0; i < 6; i++) {
+    colors[i].addEventListener("click", function() {
+        console.log(i);
+        if (correct == i) {
+            message.textContent = "Correct!";
+            changeColor.forEach(function(element) {
+                element.style.background = colors[correct].style.background;
+            })
+            answered = true;
+        }
+        else if (!answered) {
+            message.textContent = "Try Again";
+            colors[i].style.opacity= "0";
+        }
+    });
+}

@@ -49,6 +49,7 @@ Header
 header {
   background: var(--color-primary);
   color: var(--color-secondary);
+  transition: all 350ms ease-in-out;
 }
 
 header .container {
@@ -59,6 +60,10 @@ header .container {
   text-transform: uppercase;
   font-size: 3rem;
   padding: 2rem;
+}
+
+header .container div {
+  filter: drop-shadow(1px 1px 5px var(--color-tertiary));
 }
 
 .rgb {
@@ -80,7 +85,7 @@ header .container {
   color: var(--color-secondary);
   cursor: default !important;
 }
-  
+
 .btn:hover,
 .btn:focus {
   background: var(--color-primary);
@@ -94,6 +99,7 @@ header .container {
 Options
 =======
 */
+
 .options {
   background: var(--color-secondary);
 }
