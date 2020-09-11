@@ -66,7 +66,7 @@ header .container div {
 }
 
 .rgb {
-  font-size: 5rem;
+  font-size: 3.6rem;
 }
 
 .btn {
@@ -85,13 +85,6 @@ header .container div {
   cursor: default !important;
 }
 
-.btn:hover,
-.btn:focus {
-  background: var(--color-primary);
-  color: var(--color-secondary);
-  cursor: pointer;
-}
-
 /*
 =======
 Options
@@ -107,7 +100,7 @@ Options
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   height: 3rem;
 }
@@ -132,9 +125,10 @@ Colors
 
 .colors .container {
   display: none;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  padding-top: 2rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 3rem;
+  grid-row-gap: 1rem;
+  grid-column-gap: 3rem;
 }
 
 .color {
@@ -151,19 +145,26 @@ Media Queries
 =============
 */
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .rgb {
-    font-size: 3.6rem;
+    font-size: 5rem;
+  }
+
+  .btn:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    cursor: pointer;
   }
 
   .options .container {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .colors .container {
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem 3rem;
-    grid-row-gap: 1rem;
-    grid-column-gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    padding-top: 2rem;
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
   }
 }
