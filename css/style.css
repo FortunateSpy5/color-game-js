@@ -1,0 +1,143 @@
+/*
+=========
+Variables
+=========
+*/
+
+:root {
+  --color-primary: #3B76A9;
+  --color-secondary: #fafafa;
+  --color-tertiary: #1f1f1f;
+}
+
+/*
+=======
+General
+=======
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--color-tertiary);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+/*
+======
+Header
+======
+*/
+header {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.rgb {
+  font-size: 5rem;
+}
+
+.btn { 
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  transition: all 350ms ease-in-out;
+}
+
+.clicked {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  cursor: default !important;
+}
+  
+.btn:hover,
+.btn:focus {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+
+/*
+=======
+Options
+=======
+*/
+.options {
+  background: var(--color-secondary);
+}
+
+.options .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  height: 3rem;
+}
+
+.new-color,
+.modes {
+  text-transform: uppercase;
+}
+
+.modes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*
+======
+Colors
+======
+*/
+
+.colors .container {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.color {
+  padding-top: 100%;
+  background: var(--color-secondary);
+  border-radius: 15%;
+  border: 5px solid var(--color-secondary);
+  transition: all 350ms ease-in-out;
+}
