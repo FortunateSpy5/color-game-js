@@ -5,7 +5,7 @@ Variables
 */
 
 :root {
-  --color-primary: #3B76A9;
+  --color-primary: #3b76a9;
   --color-secondary: #fafafa;
   --color-tertiary: #1f1f1f;
 }
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: var(--color-tertiary);
 }
 
@@ -39,7 +39,6 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
 }
-
 
 /*
 ======
@@ -63,14 +62,14 @@ header .container {
 }
 
 header .container div {
-  filter: drop-shadow(1px 1px 5px var(--color-tertiary));
+  filter: drop-shadow(1px 2px 2px #000);
 }
 
 .rgb {
   font-size: 5rem;
 }
 
-.btn { 
+.btn {
   height: 3rem;
   display: flex;
   flex-direction: row;
@@ -92,7 +91,6 @@ header .container div {
   color: var(--color-secondary);
   cursor: pointer;
 }
-
 
 /*
 =======
@@ -126,7 +124,6 @@ Options
   align-items: center;
 }
 
-
 /*
 ======
 Colors
@@ -146,4 +143,27 @@ Colors
   border-radius: 15%;
   border: 5px solid var(--color-secondary);
   transition: all 350ms ease-in-out;
+}
+
+/*
+=============
+Media Queries
+=============
+*/
+
+@media screen and (max-width: 480px) {
+  .rgb {
+    font-size: 3.6rem;
+  }
+
+  .options .container {
+    font-size: 1.4rem;
+  }
+
+  .colors .container {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 3rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 3rem;
+  }
 }
